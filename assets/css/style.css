@@ -1,0 +1,305 @@
+body {
+    margin: 0px;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    top: 0px;
+    background-color: #121212;
+    width: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 14px;
+    position: fixed;
+    z-index:1000
+}
+/* BARRA DE BUSQUEDA */
+.searchbar {
+    background-color: #121212;
+    padding: 5px;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.search-button {
+    background-color: #121212;
+    border: none;
+    padding: 2px 2px;
+    border-radius: 20px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.search-button i {
+    color: white;
+}
+/* HAMBURGUESA ÑAM ÑAM */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.menu {
+    font-size: 20px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.menu-toggle:checked+.navbar .menu {
+    display: flex;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #121212;
+}
+/* SECCION PRINCIPAL */
+h2 {
+    color: white;
+    margin-left: 5%;
+}
+
+h3 {
+    color: lightblue;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.card {
+    width: 180px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    overflow: hidden;
+    color: white;
+    height: 900PX;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+    z-index: 500;
+}
+
+.card-content {
+    padding: 10px;
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+}
+.card-content h2 {
+    margin: 0 0 10px;
+}
+
+.rating {
+    font-size: 20px;
+    color: #FFD700;
+}
+
+.read-more {
+    width: 90%;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: lightskyblue;
+}
+/* FOOTER */
+footer {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 36px;
+}
+/* MEDIA QUERIES */
+@media (max-width: 576px) {
+    .menulateral {
+        display: none;
+    }
+
+    .card img {
+        filter: grayscale(0%);
+    }
+}
+
+@media (min-width: 576px) {
+    nav {
+        height: 100vh;
+        width: 20%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: #121212;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 100%;
+        position: fixed;
+    }
+
+    .searchbar {
+        background-color: #121212;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-input {
+        padding: 12px;
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .search-button {
+        background-color: #121212;
+        border: none;
+        padding: 5px 5px;
+        border-radius: 20px;
+        margin-left: 2px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .search-button i {
+        color: white;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menulateral {
+        width: 100%;
+        background-color: #121212;
+        font-size: 100%;
+    }
+
+    .menulateral ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .menulateral ul li {
+        padding: 15px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .menulateral ul li:hover {
+        color: gray;
+    }
+
+    .menulateral ul li a {
+        text-decoration: none;
+        color: gray;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .menulateral ul li:hover a {
+        color: white;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 5px;
+    }
+
+    .card {
+        width: 300px;
+        height: 800px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 300px;
+    }
+/* EFECTO PARA QUE LAS IMAGENES SE PONGAN DE COLOR */
+    .card:hover img {
+        filter: grayscale(0%);
+        cursor: pointer;
+    }
+
+    main {
+        margin-left: 20%;
+    }
+
+    footer {
+        margin-left: 20%;
+    }
+}
